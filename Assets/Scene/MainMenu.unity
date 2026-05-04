@@ -1325,6 +1325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fe824a8c26dfe54d9aba7577b69f8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuManager
+  art: {fileID: 11400000, guid: b42052afa2175ef4191ff964e90d9f13, type: 2}
+  image: {fileID: 504970028}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
