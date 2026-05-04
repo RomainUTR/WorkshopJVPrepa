@@ -7,6 +7,7 @@ public class InteractiveZone : InteractiveObject
         if(other.tag == "Player")
         {
             PlayerInteractor.Instance.Interact(this);
+            Debug.Log("Interact");
         }
     }
 }
