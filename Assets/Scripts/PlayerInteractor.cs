@@ -90,12 +90,12 @@ public class PlayerInteractor : MonoBehaviour
             }
 
         }
-
-        objectInteracting.interactionID = interaction.nextInteractionID;
-        if(objectInteracting.interactionID == interaction.nextInteractionID)
+        if (objectInteracting.interactionID == interaction.nextInteractionID)
         {
             interaction.playNextInteractionInstantly = false;
         }
+
+        objectInteracting.interactionID = interaction.nextInteractionID;
 
         CursorController.Instance.InteractAnim();
 
@@ -144,6 +144,9 @@ public class PlayerInteractor : MonoBehaviour
                 break;
             case InteractionType.teleportPlayer:
                 PlayerController.Instance.transform.position = InteractiveObjectFromName(interaction.stringArg).transform.position;
+                break;
+            case InteractionType.combinaisonButton:
+                Debug.Log("Button trigger");
                 break;
         }
 
