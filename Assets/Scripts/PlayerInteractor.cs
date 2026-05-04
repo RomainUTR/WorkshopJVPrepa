@@ -143,6 +143,9 @@ public class PlayerInteractor : MonoBehaviour
             case InteractionType.teleportPlayer:
                 PlayerController.Instance.transform.position = InteractiveObjectFromName(interaction.stringArg).transform.position;
                 break;
+            case InteractionType.combinaisonButton:
+                Debug.Log("Button trigger");
+                break;
         }
 
         StartCoroutine(InteractionCoroutine());
