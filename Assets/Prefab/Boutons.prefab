@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1813066181984791187}
   - component: {fileID: 866723176963622383}
   - component: {fileID: 8793673233486701655}
+  - component: {fileID: 5778341479572162393}
   m_Layer: 0
   m_Name: Cylinder (1)
   m_TagString: Untagged
@@ -1323,6 +1324,28 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &5778341479572162393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221413506037113030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46147955e10b8a143ac63af4983994b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
+  objectName: B1
+  interactionID: 0
+  interactions:
+  - requiredObject: 
+    type: 10
+    stringArg: C1
+    length: 0
+    nextInteractionID: 0
+    playNextInteractionInstantly: 0
+  goAwayAtStart: 0
 --- !u!1 &463943913616995259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2693,6 +2716,7 @@ GameObject:
   - component: {fileID: 4166778320996014951}
   - component: {fileID: 2048251683820927220}
   - component: {fileID: 5457217072758311728}
+  - component: {fileID: 6831223423996563981}
   m_Layer: 0
   m_Name: Cylinder (1)
   m_TagString: Untagged
@@ -4002,6 +4026,28 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &6831223423996563981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280071203914592946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46147955e10b8a143ac63af4983994b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
+  objectName: B3
+  interactionID: 0
+  interactions:
+  - requiredObject: 
+    type: 10
+    stringArg: C1
+    length: 0
+    nextInteractionID: 0
+    playNextInteractionInstantly: 0
+  goAwayAtStart: 0
 --- !u!1 &1287338843152833549
 GameObject:
   m_ObjectHideFlags: 0
@@ -5339,6 +5385,7 @@ GameObject:
   - component: {fileID: 4986064800139068459}
   - component: {fileID: 8092558914094504468}
   - component: {fileID: 1377366390883156539}
+  - component: {fileID: 4051275309046489941}
   m_Layer: 0
   m_Name: Cylinder (1)
   m_TagString: Untagged
@@ -6648,6 +6695,28 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &4051275309046489941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2561244103165615399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46147955e10b8a143ac63af4983994b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
+  objectName: B4
+  interactionID: 0
+  interactions:
+  - requiredObject: 
+    type: 10
+    stringArg: C1
+    length: 0
+    nextInteractionID: 0
+    playNextInteractionInstantly: 0
+  goAwayAtStart: 0
 --- !u!1 &4067440001748027620
 GameObject:
   m_ObjectHideFlags: 0
@@ -9369,6 +9438,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1093713696814507551}
+  - component: {fileID: 6795283108039703074}
   m_Layer: 0
   m_Name: Boutons
   m_TagString: Untagged
@@ -9395,6 +9465,31 @@ Transform:
   - {fileID: 8219290628064813438}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6795283108039703074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7773821961999072556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7287d758540946fd97fb5b781a9d44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveCombinationHandler
+  objectName: C1
+  interactionID: 0
+  interactions: []
+  goAwayAtStart: 0
+  ButtonsClickedName:
+  - B1
+  - B2
+  - B3
+  - B4
+  RedMaterial: {fileID: 2100000, guid: b9878378fff57b1448329ad6e57b6696, type: 2}
+  WhiteMaterial: {fileID: 2100000, guid: 66057fa48b6394c6694bdd3d34fb2ae2, type: 2}
+  BlackMaterial: {fileID: 2100000, guid: d28948d61ecd5407f87575849fd23762, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: f600e3eba65ac51499ce21cf9c7864c7, type: 2}
 --- !u!1 &8544174703416866264
 GameObject:
   m_ObjectHideFlags: 0
@@ -9409,6 +9504,7 @@ GameObject:
   - component: {fileID: 2660059351873878665}
   - component: {fileID: 2998492391874552898}
   - component: {fileID: 6923728315824310529}
+  - component: {fileID: 8120300869183628554}
   m_Layer: 0
   m_Name: Cylinder (1)
   m_TagString: Untagged
@@ -10718,6 +10814,28 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &8120300869183628554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8544174703416866264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46147955e10b8a143ac63af4983994b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
+  objectName: B2
+  interactionID: 0
+  interactions:
+  - requiredObject: 
+    type: 10
+    stringArg: C1
+    length: 0
+    nextInteractionID: 0
+    playNextInteractionInstantly: 0
+  goAwayAtStart: 0
 --- !u!1 &8848512094233756790
 GameObject:
   m_ObjectHideFlags: 0

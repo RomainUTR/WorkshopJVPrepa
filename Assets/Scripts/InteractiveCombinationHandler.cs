@@ -12,8 +12,8 @@ public class InteractiveCombinationHandler : InteractiveObject
     List<string> ClickedNames;
     public Material RedMaterial, WhiteMaterial, BlackMaterial, GreenMaterial;
 
-    public SpriteRenderer[] TutorialRenderers; 
-    public Sprite[] TutorialSprites;
+    //public SpriteRenderer[] TutorialRenderers; 
+    //public Sprite[] TutorialSprites;
 
     private List<GameObject> ButtonsGO = new List<GameObject>();
     private int _indexButton;
@@ -21,14 +21,14 @@ public class InteractiveCombinationHandler : InteractiveObject
 
     void Start()
     {
-        for (int i = 0; i < TutorialRenderers.Length; i++)
-        {
-            if (i < TutorialSprites.Length) 
-            {
-                TutorialRenderers[i].sprite = TutorialSprites[i];
-                TutorialRenderers[i].color = Color.white; 
-            }
-        }
+        //for (int i = 0; i < TutorialRenderers.Length; i++)
+        //{
+        //    if (i < TutorialSprites.Length) 
+        //    {
+        //        TutorialRenderers[i].sprite = TutorialSprites[i];
+        //        TutorialRenderers[i].color = Color.white; 
+        //    }
+        //}
 
         ClickedNames = new List<string>();
     }
@@ -87,8 +87,8 @@ public class InteractiveCombinationHandler : InteractiveObject
         print("cool");
         foreach (GameObject go in ButtonsGO)
         {
-            go.GetComponentInChildren<MeshRenderer>().material = GreenMaterial;
-            go.GetComponent<InteractiveZone>().enabled = false;
+            //go.GetComponentInChildren<MeshRenderer>().material = GreenMaterial;
+            //go.GetComponent<InteractiveZone>().enabled = false;
             _canClick = false;
             ResetTutorial();
         }
@@ -105,9 +105,9 @@ public class InteractiveCombinationHandler : InteractiveObject
     }
     private void ResetTutorial()
     {
-        foreach (SpriteRenderer renderer in TutorialRenderers)
-        {
-            renderer.color = Color.white; 
-        }
+        //foreach (SpriteRenderer renderer in TutorialRenderers)
+        //{
+        //    renderer.color = Color.white; 
+        //}
     }
 }
