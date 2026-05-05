@@ -1,8 +1,6 @@
+using RomainUTR.SLToolbox.Runtime;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class InteractiveCombinationHandler : InteractiveObject
@@ -11,9 +9,11 @@ public class InteractiveCombinationHandler : InteractiveObject
     public string[] ButtonsClickedName;
     List<string> ClickedNames;
     public Material RedMaterial, WhiteMaterial, BlackMaterial, GreenMaterial;
+    [Range(0f, 5f)] public float DurationOfErrorColor = 1.0f;
 
-    //public SpriteRenderer[] TutorialRenderers; 
-    //public Sprite[] TutorialSprites;
+    public bool IsTutorial = false;
+    [SLShowIf("IsTutorial")] public SpriteRenderer[] TutorialRenderers;
+    [SLShowIf("IsTutorial")] public Sprite[] TutorialSprites;
 
     private List<GameObject> ButtonsGO = new List<GameObject>();
     private int _indexButton;
@@ -21,14 +21,23 @@ public class InteractiveCombinationHandler : InteractiveObject
 
     void Start()
     {
-        //for (int i = 0; i < TutorialRenderers.Length; i++)
-        //{
-        //    if (i < TutorialSprites.Length) 
-        //    {
-        //        TutorialRenderers[i].sprite = TutorialSprites[i];
-        //        TutorialRenderers[i].color = Color.white; 
-        //    }
-        //}
+        if (IsTutorial)
+        {
+            for (int i = 0; i < TutorialRenderers.Length; i++)
+            {
+                if (i < TutorialSprites.Length)
+                {
+                    TutorialRenderers[i].sprite = TutorialSprites[i];
+                    TutorialRenderers[i].color = Color.white;
+                }
+            }
+        } else
+        {
+            foreach (SpriteRenderer sr in TutorialRenderers)
+            {
+                sr.enabled = false;
+            }
+        }
 
         ClickedNames = new List<string>();
     }
@@ -63,23 +72,20 @@ public class InteractiveCombinationHandler : InteractiveObject
         {
             _indexButton++;
         }
-
-
     }
 
     private IEnumerator FailCombinaison()
     {
         print("pas cool");
         
-
         foreach (GameObject go in ButtonsGO)
         {
-            go.GetComponentInChildren<MeshRenderer>().material = RedMaterial;
+            ChangeButtonMaterial(this, RedMaterial);
             //PlayerInteractor.Fin
         }
 
-        yield return new WaitForSeconds(1.5f);
-        ResetTutorial();
+        yield return new WaitForSeconds(DurationOfErrorColor);
+        ResetMaterial();
     }
 
     public void SucceedCombination()
@@ -87,27 +93,27 @@ public class InteractiveCombinationHandler : InteractiveObject
         print("cool");
         foreach (GameObject go in ButtonsGO)
         {
-            //go.GetComponentInChildren<MeshRenderer>().material = GreenMaterial;
-            //go.GetComponent<InteractiveZone>().enabled = false;
+            ChangeButtonMaterial(this, GreenMaterial);
             _canClick = false;
-            ResetTutorial();
         }
 
         if(interactions.Length > 0)
         PlayerInteractor.Instance.Interact(this);
     }
+
     public void ResetMaterial()
     {
         foreach(GameObject go in ButtonsGO)
         {
-            go.GetComponentInChildren<MeshRenderer>().material = WhiteMaterial;
+            ChangeButtonMaterial(this, WhiteMaterial);
         }
     }
-    private void ResetTutorial()
+
+    void ChangeButtonMaterial(InteractiveObject obj, Material targetMaterial)
     {
-        //foreach (SpriteRenderer renderer in TutorialRenderers)
-        //{
-        //    renderer.color = Color.white; 
-        //}
+        foreach (GameObject go in ButtonsGO)
+        {
+            go.GetComponentInChildren<MeshRenderer>().material = targetMaterial;
+        }
     }
 }
