@@ -146,7 +146,8 @@ public class PlayerInteractor : MonoBehaviour
                 PlayerController.Instance.transform.position = InteractiveObjectFromName(interaction.stringArg).transform.position;
                 break;
             case InteractionType.combinaisonButton:
-                CombinaisonManager.Instance.HandleButton(interactiveObject);
+                InteractiveCombinationHandler handler = InteractiveObjectFromName(interaction.stringArg) as InteractiveCombinationHandler;
+                handler.HandleButton(interactiveObject);
                 break;
         }
 
