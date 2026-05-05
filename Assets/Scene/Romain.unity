@@ -367,14 +367,9 @@ MonoBehaviour:
   WhiteMaterial: {fileID: 2100000, guid: 66057fa48b6394c6694bdd3d34fb2ae2, type: 2}
   BlackMaterial: {fileID: 2100000, guid: d28948d61ecd5407f87575849fd23762, type: 2}
   GreenMaterial: {fileID: 2100000, guid: f600e3eba65ac51499ce21cf9c7864c7, type: 2}
-  TutorialRenderers:
-  - {fileID: 320023885}
-  - {fileID: 1342630339}
-  - {fileID: 1688613226}
-  TutorialSprites:
-  - {fileID: 21300000, guid: 2e0090ade7e054dbe8282a5c7f1efb5b, type: 3}
-  - {fileID: 21300000, guid: 2d501668358f64d168c5a1ffbf9ec346, type: 3}
-  - {fileID: 21300000, guid: 7a071d04834e243efa75eca2037b119e, type: 3}
+  IsTutorial: 0
+  TutorialRenderers: []
+  TutorialSprites: []
 --- !u!1 &87623372
 GameObject:
   m_ObjectHideFlags: 0
