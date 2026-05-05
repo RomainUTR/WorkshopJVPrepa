@@ -311,6 +311,70 @@ Transform:
   - {fileID: 1103868007}
   m_Father: {fileID: 681691755}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &38207752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 38207753}
+  - component: {fileID: 38207754}
+  m_Layer: 0
+  m_Name: INTERACTIVECOMBINATIONHANDLER_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &38207753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38207752}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1319568339}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &38207754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38207752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7287d758540946fd97fb5b781a9d44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveCombinationHandler
+  objectName: ICH1
+  interactionID: 0
+  interactions: []
+  goAwayAtStart: 0
+  ButtonsClickedName:
+  - B1
+  - B2
+  - B3
+  RedMaterial: {fileID: 2100000, guid: b9878378fff57b1448329ad6e57b6696, type: 2}
+  WhiteMaterial: {fileID: 2100000, guid: 66057fa48b6394c6694bdd3d34fb2ae2, type: 2}
+  BlackMaterial: {fileID: 2100000, guid: d28948d61ecd5407f87575849fd23762, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: f600e3eba65ac51499ce21cf9c7864c7, type: 2}
+  TutorialRenderers:
+  - {fileID: 320023885}
+  - {fileID: 1342630339}
+  - {fileID: 1688613226}
+  TutorialSprites:
+  - {fileID: 21300000, guid: 2e0090ade7e054dbe8282a5c7f1efb5b, type: 3}
+  - {fileID: 21300000, guid: 2d501668358f64d168c5a1ffbf9ec346, type: 3}
+  - {fileID: 21300000, guid: 7a071d04834e243efa75eca2037b119e, type: 3}
 --- !u!1 &87623372
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,12 +2410,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75dedebfca8e28d4d855e959df8d3ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: Combinaison Button 3
+  objectName: B3
   interactionID: 0
   interactions:
   - requiredObject: 
     type: 10
-    stringArg: 
+    stringArg: ICH1
     length: 0
     nextInteractionID: 0
     playNextInteractionInstantly: 0
@@ -4516,12 +4580,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75dedebfca8e28d4d855e959df8d3ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: Combinaison Button 2
+  objectName: B2
   interactionID: 0
   interactions:
   - requiredObject: 
     type: 10
-    stringArg: 
+    stringArg: ICH1
     length: 0
     nextInteractionID: 0
     playNextInteractionInstantly: 0
@@ -5388,6 +5452,7 @@ Transform:
   - {fileID: 1505326948}
   - {fileID: 963180292}
   - {fileID: 442340395}
+  - {fileID: 38207753}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1342585790
@@ -5937,12 +6002,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75dedebfca8e28d4d855e959df8d3ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: Combinaison Button 1
+  objectName: B1
   interactionID: 0
   interactions:
   - requiredObject: 
     type: 10
-    stringArg: 
+    stringArg: ICH1
     length: 0
     nextInteractionID: 0
     playNextInteractionInstantly: 0
@@ -6766,7 +6831,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1757745811}
   - component: {fileID: 1757745812}
-  - component: {fileID: 1757745813}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6802,34 +6866,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCheckpointName: 
---- !u!114 &1757745813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757745809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7287d758540946fd97fb5b781a9d44d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CombinaisonManager
-  ButtonsClickedName:
-  - Combinaison Button 1
-  - Combinaison Button 2
-  - Combinaison Button 3
-  RedMaterial: {fileID: 2100000, guid: b9878378fff57b1448329ad6e57b6696, type: 2}
-  WhiteMaterial: {fileID: 2100000, guid: 66057fa48b6394c6694bdd3d34fb2ae2, type: 2}
-  BlackMaterial: {fileID: 2100000, guid: d28948d61ecd5407f87575849fd23762, type: 2}
-  GreenMaterial: {fileID: 2100000, guid: f600e3eba65ac51499ce21cf9c7864c7, type: 2}
-  TutorialRenderers:
-  - {fileID: 320023885}
-  - {fileID: 1342630339}
-  - {fileID: 1688613226}
-  TutorialSprites:
-  - {fileID: 21300000, guid: 245a12fb6bcf5417e87eb1357cea1a9a, type: 3}
-  - {fileID: 21300000, guid: 2e0090ade7e054dbe8282a5c7f1efb5b, type: 3}
-  - {fileID: 21300000, guid: 2d501668358f64d168c5a1ffbf9ec346, type: 3}
 --- !u!1 &1772577899
 GameObject:
   m_ObjectHideFlags: 0
