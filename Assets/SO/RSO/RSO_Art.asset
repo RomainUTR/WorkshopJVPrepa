@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cb42be52dc6b645be27a29ebd64ec0, type: 3}
   m_Name: RSO_Art
   m_EditorClassIdentifier: Assembly-CSharp::RSO_Art
-  MainMenuBackgroundSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  MainMenuBackgroundSprite: {fileID: 21300000, guid: cfd30db307a3bc941b14a707fabed6d9, type: 3}
