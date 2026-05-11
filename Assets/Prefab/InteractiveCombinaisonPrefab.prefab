@@ -234,6 +234,12 @@ MonoBehaviour:
     type: 10
     stringArg: ICH1
     length: 0
+    nextInteractionID: 1
+    playNextInteractionInstantly: 1
+  - requiredObject: 
+    type: 6
+    stringArg: Boop
+    length: 0
     nextInteractionID: 0
     playNextInteractionInstantly: 0
   goAwayAtStart: 0
@@ -520,6 +526,12 @@ MonoBehaviour:
     type: 10
     stringArg: ICH1
     length: 0
+    nextInteractionID: 1
+    playNextInteractionInstantly: 1
+  - requiredObject: 
+    type: 6
+    stringArg: Boop
+    length: 0
     nextInteractionID: 0
     playNextInteractionInstantly: 0
   goAwayAtStart: 0
@@ -597,6 +609,12 @@ MonoBehaviour:
   - requiredObject: 
     type: 10
     stringArg: ICH1
+    length: 0
+    nextInteractionID: 1
+    playNextInteractionInstantly: 1
+  - requiredObject: 
+    type: 6
+    stringArg: Boop
     length: 0
     nextInteractionID: 0
     playNextInteractionInstantly: 0
@@ -960,6 +978,12 @@ MonoBehaviour:
     type: 10
     stringArg: ICH1
     length: 0
+    nextInteractionID: 1
+    playNextInteractionInstantly: 1
+  - requiredObject: 
+    type: 6
+    stringArg: Boop
+    length: 0
     nextInteractionID: 0
     playNextInteractionInstantly: 0
   goAwayAtStart: 0
@@ -1150,7 +1174,7 @@ Transform:
   m_GameObject: {fileID: 7759434964361858130}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1182,7 +1206,7 @@ MonoBehaviour:
   BlackMaterial: {fileID: 2100000, guid: d28948d61ecd5407f87575849fd23762, type: 2}
   GreenMaterial: {fileID: 2100000, guid: f600e3eba65ac51499ce21cf9c7864c7, type: 2}
   DurationOfErrorColor: 1
-  IsTutorial: 0
+  IsTutorial: 1
   TutorialRenderers:
   - {fileID: 4483514134464395410}
   - {fileID: 8943352265100480842}
